@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  echo-db:
+    container_name: "echo-db"
+    image: postgres:14
+    restart: always
+    tty: true
+    ports:
+      - "5437:5432"
+    volumes:
+      - ./postgres:/data/echo-postgres
+    environment:
+      - POSTGRES_DB=user
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
