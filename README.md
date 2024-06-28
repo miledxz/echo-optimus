@@ -7,6 +7,7 @@ Simple architecture echo server
 
 
 First thing is to make sure you do: go mod tidy <br>
+Define your environment .env
 Second thing is running database with : docker compose up -d <br>
 Run server: go run main.go 
 
