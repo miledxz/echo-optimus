@@ -23,9 +23,6 @@ func (s *userStore) Create(tx *sql.Tx, user *models.User) (int64, error) {
 	var err error
 
 	query := "INSERT INTO users (id, username) VALUES ($1, $2) RETURNING id"
-	if err != nil {
-		return 0, err
-	}
 
 	var id int64
 
